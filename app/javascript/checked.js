@@ -11,6 +11,8 @@ function check() {
       XHR.open("GET", `/posts/${postId}`, true);
       XHR.responseType = "json";
       XHR.send();
+      
+      
       XHR.onload = () => {
         if (XHR.status != 200) {
           alert(`Error ${XHR.status}: ${XHR.statusText}`);
